@@ -20,11 +20,19 @@ int main()
     // Initialize variables
     int username;
     int password;
+    char answer;
 
     // Grab user input
     std::cout << "Please enter a user I.D (must be a number): ";
     std::cin >> username;
-    std::cout << "Username entered is " << username;
+    std::cout << "Username entered is " << username << "\n";
+    std::cout << "Are you SURE you want to continue with this.\nThis is extremely risky and it is HIGHLY recommended you use a VPN or some other proxy as this is easily traceable.\nARE YOU ABSOULTELY SURE (Y/n) ";
+    std::cin >> answer;
+    if (answer == 'n') {
+        exit(0);
+    }
+    std::cout << "Beginning to send requests...";
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
